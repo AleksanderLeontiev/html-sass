@@ -1,0 +1,54 @@
+.page {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background-color: $main;
+  box-shadow: 0 15px 25px rgba($gray, 0.35);
+  border-radius: 10px;
+  @include transition-point($mobile-xs) {
+    margin-bottom: 2rem;
+    padding: 1rem;
+  }
+}
+
+.page__title {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  color: $blue;
+  font-weight: 500;
+}
+.page__actions {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  color: rgba($blue, 0.6);
+}
+.page__header {
+  margin: 0 0 0.5rem;
+}
+
+.page__content {
+  margin-bottom: 1.5rem;
+  @include page-img;
+}
+.page__text {
+  font-size: 1.4rem;
+  color: #d2d2d2;
+}
+.page__content-subtitle {
+  color: $gray;
+}
+.page__content-title {
+  color: $gray;
+}
+.page__img {
+  @include page-img;
+
+  background: url("/src/img/move_now.jpg");
+}
+.page__text-img {
+  height: 20vh;
+  width: 30vh;
+  margin-left: auto;
+  margin-right: auto;
+}

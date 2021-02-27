@@ -1,0 +1,70 @@
+{
+  "name": "html-sass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "prettier --check . && stylelint **/*.scss",
+    "lint:fix": "prettier --write . && stylelint **/*.scss --fix",
+    "start": "webpack serve --mode development",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AleksanderLeontiev/html-sass.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AleksanderLeontiev/html-sass/issues"
+  },
+  "homepage": "https://github.com/AleksanderLeontiev/html-sass#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "babel-loader": "^8.2.2",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "browser-sync": "^2.26.14",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.2.1",
+    "css-loader": "^5.0.1",
+    "ember-template-lint": "^2.18.1",
+    "file-loader": "^6.2.0",
+    "glob": "^7.1.6",
+    "html-loader": "^2.1.1",
+    "html-webpack-plugin": "^4.5.1",
+    "husky": "^4.3.8",
+    "lint-staged": "^10.5.3",
+    "mini-css-extract-plugin": "^1.3.5",
+    "optimize-css-assets-webpack-plugin": "^5.0.4",
+    "postcss": "^8.2.4",
+    "postcss-loader": "^4.2.0",
+    "prettier": "^2.2.1",
+    "sass": "^1.32.6",
+    "sass-loader": "^10.1.1",
+    "style-loader": "^2.0.0",
+    "stylelint": "^13.11.0",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-scss": "^3.18.0",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^4.4.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write"
+    ],
+    "*.{html,css,md,yml}": "prettier --write",
+    "*.scss": "stylelint --fix"
+  },
+  "dependencies": {
+    "glob": "latest"
+  }
+}

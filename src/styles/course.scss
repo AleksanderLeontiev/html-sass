@@ -1,0 +1,29 @@
+.course {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background-color: $main;
+  box-shadow: 0 15px 25px rgba($gray, 0.35);
+  border-radius: 10px;
+  @include transition-point($mobile-xs) {
+    padding-right: 2rem;
+  }
+}
+.course__list {
+  padding-left: 1rem;
+  margin-top: -1.5rem;
+}
+.course__text {
+  font-size: 1.4rem;
+  color: #d2d2d2;
+}
+.course__article {
+  border-bottom: 2px solid #1c1c1c;
+  margin-bottom: 2rem;
+}
+
+.course__link {
+  color: $green;
+}
+.course__read {
+  color: $blue;
+}

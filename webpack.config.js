@@ -3,7 +3,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CopyPlugin = require("copy-webpack-plugin");
 const glob = require("glob");
 const pages = glob.sync("pages/*.html");
 
@@ -34,7 +33,7 @@ module.exports = {
           {
             loader: "file-loader",
             options: {
-              name: "images/[name].[ext]",
+              name: "[name].[ext]",
               outputPath: "images",
             },
           },
@@ -49,14 +48,6 @@ module.exports = {
     hot: true,
   },
   plugins: [
-    new CopyPlugin({
-      patterns: [
-        {
-          from: "./src/img",
-          to: "dest",
-        },
-      ],
-    }),
     new CleanWebpackPlugin(),
     new BrowserSyncPlugin(
       {

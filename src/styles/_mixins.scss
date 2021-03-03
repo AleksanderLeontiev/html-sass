@@ -1,0 +1,13 @@
+@mixin transition-point($md) {
+  @media screen and (max-width: $md) {
+    @content;
+  }
+}
+@mixin page-img {
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+  }
+}

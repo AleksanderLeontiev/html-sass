@@ -1,0 +1,32 @@
+.nav {
+  @include transition-point($tablet-md) {
+    display: none;
+  }
+}
+
+.nav__list {
+  list-style-type: none;
+  display: flex;
+  @include transition-point($tablet-md) {
+    flex-direction: column;
+    margin-left: -5rem;
+  }
+}
+
+.nav__link {
+  display: block;
+  justify-content: space-between;
+  padding: 0 1.2rem;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: $blue;
+  text-decoration: none;
+  transition: background-color 0.2s linear;
+  &:hover {
+    background-color: $turquoise;
+  }
+  @include transition-point($tablet-md) {
+    font-size: 1.6rem;
+  }
+}

@@ -1,0 +1,52 @@
+.feedback-form {
+  padding: 2rem;
+  margin-bottom: 3rem;
+  background-color: $main;
+  border-radius: 10px;
+  @include transition-point($mobile-xs) {
+    padding-right: 1.5rem;
+  }
+}
+
+.feedback-form__titles {
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+  color: $green;
+}
+
+.feedback-form__textarea {
+  background: transparent;
+  font-family: inherit;
+  height: 60px;
+  width: 100%;
+  resize: none;
+  color: $blue;
+  border-radius: 5px;
+}
+
+.feedback-form__input {
+  font-family: inherit;
+  padding: 1.2rem 2rem;
+  color: $blue;
+  border-radius: 5px;
+  height: 20px;
+  background: transparent;
+  border: solid 2px #3f3e3e;
+}
+
+.feedback-form__submit {
+  margin-top: 1rem;
+  display: block;
+  background: $blue;
+  border: none;
+  border-radius: 3em;
+  font-family: inherit;
+  font-size: 1.4rem;
+  cursor: pointer;
+  line-height: 1.6;
+  font-weight: 500;
+  transition: background-color 0.2s linear;
+  &:hover {
+    background-color: $green (15%);
+  }
+}

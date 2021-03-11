@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="zxx">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="site article" />
     <title>Record page</title>
   </head>
   <body>
@@ -28,6 +26,7 @@
             </li>
           </ul>
         </nav>
+        <p class="burger" id="trigger"><span></span></p>
       </div>
       <div class="header__right">
         <nav class="nav">
@@ -49,12 +48,16 @@
     </header>
     <aside class="sidebar" id="sidebar">
       <div class="sidebar__header">
-        <img src="./img/love_english.jpg" alt="" />
+        <img
+          class="page__img"
+          src="./images/love_english.jpg"
+          alt="photo english"
+        />
       </div>
       <div class="sidebar__content">
         <div class="profile">
           <div class="profile__content">
-            <h1 class="profile__content-title">Интересные факты</h1>
+            <h2 class="profile__content-title">Интересные факты</h2>
           </div>
           <div class="profile__text">
             <p>
@@ -73,6 +76,23 @@
           </div>
         </div>
       </div>
+      <nav class="nav nav--mobile">
+        <ul class="nav__list">
+          <li>
+            <a class="nav__link" href="./index.html">Главная</a>
+          </li>
+          <li>
+            <a class="nav__link" href="./list_records.html">Список записей</a>
+          </li>
+          <li>
+            <a class="nav__link" href="./feedback.html">Обратная связь</a>
+          </li>
+          <li>
+            <a class="nav__link" href="./record_page.html">Страница записи</a>
+          </li>
+          <li><a class="nav__link" href="#">Выйти</a></li>
+        </ul>
+      </nav>
     </aside>
     <main class="main">
       <div class="main__actions">
@@ -82,9 +102,9 @@
       <div class="container">
         <article class="page">
           <div class="page__header">
-            <h1 class="page__title page__title--start">
+            <h2 class="page__title page__title--start">
               С чего начать изучение английского?
-            </h1>
+            </h2>
           </div>
           <div class="page__content">
             <h2 class="page__content-title">Начинай прямо сейчас</h2>
@@ -95,7 +115,8 @@
               placeat quis nulla delectus corrupti.
             </p>
             <div class="page__text-img">
-              <img class="page__img" src=./img/move_now.jpg alt=""/>
+              <img class="page__img" src=./images/move_now.jpg alt="photo
+              motivation"/>
             </div>
             <h3 class="page__content-subtitle">Основы</h3>
             <p class="page__text">

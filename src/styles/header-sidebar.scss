@@ -1,4 +1,3 @@
-@import "page";
 .sidebar {
   width: $sidebar-width;
   height: 100vh;
@@ -28,18 +27,27 @@
   @include page-img;
 
   background: url("/src/img/love_english.jpg") no-repeat;
-  background-size: cover;
 }
 
 .sidebar__content {
   padding: 0 2rem;
-  @include transition-point($tablet-md) {
-    flex-grow: 1;
-  }
 }
 .profile {
   color: chartreuse;
+  overflow: hidden;
+  @include transition-point($tablet-md) {
+    .show-sidebar & {
+      display: none;
+      position: relative;
+    }
+  }
 }
 .profile__content-title {
   color: $green;
+  filter: brightness(2);
+  @include transition-point($tablet-md) {
+    .show-sidebar & {
+      position: relative;
+    }
+  }
 }

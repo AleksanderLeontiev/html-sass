@@ -41,6 +41,7 @@
 .page__text {
   font-size: 1.4rem;
   color: #d2d2d2;
+  text-align: justify;
 }
 .page__content-subtitle {
   color: $gray;
@@ -48,18 +49,13 @@
 .page__content-title {
   color: $gray;
 }
-.page__img {
-  @include page-img;
-
-  background: url("/src/img/move_now.jpg");
-}
 .page__text-img {
-  height: 20vh;
-  width: 30vh;
-  margin-left: auto;
-  margin-right: auto;
+  width: 275px;
+  height: 15rem;
+  margin: auto;
+  background: url("/src/img/move_now.jpg") no-repeat;
 }
+
 .page__title.page__title--start {
   color: $turquoise;
-  //filter: brightness(2.5);
 }

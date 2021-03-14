@@ -1,21 +1,21 @@
 .sidebar {
   width: $sidebar-width;
-  height: 100vh;
+  height: 100%;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 0;
   background-color: $main;
   box-shadow: 5px 0 15px rgba(#050505, 0.1);
+  overflow: hidden;
 
   @include transition-point($tablet-md) {
     display: flex;
     flex-direction: column;
     height: calc(100vh - 4rem);
-    overflow: auto;
     top: 4rem;
     transform: translateX(-100%);
-    transition: transform 0.2s linear;
+    transition: transform 0.1s linear;
     .show-sidebar & {
       transform: translateX(0);
     }
@@ -37,8 +37,8 @@
   overflow: hidden;
   @include transition-point($tablet-md) {
     .show-sidebar & {
-      display: none;
       position: relative;
+      display: none;
     }
   }
 }
@@ -48,6 +48,10 @@
   @include transition-point($tablet-md) {
     .show-sidebar & {
       position: relative;
+      display: none;
     }
   }
+}
+.profile__text {
+  text-align: justify;
 }

@@ -1,12 +1,13 @@
 .page {
-  margin-bottom: 3rem;
-  padding: 2rem;
+  padding: 1rem 2rem;
   background-color: $main;
   box-shadow: 0 15px 25px rgba($gray, 0.35);
   border-radius: 10px;
+  margin: 1vh 5vh;
   @include transition-point($mobile-xs) {
-    margin-bottom: 2rem;
-    padding: 1rem;
+    margin: 0;
+    padding: 3rem 1rem;
+    overflow: auto;
   }
 }
 
@@ -39,7 +40,7 @@
   @include page-img;
 }
 .page__text {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   color: #d2d2d2;
   text-align: justify;
 }
@@ -51,9 +52,12 @@
 }
 .page__text-img {
   width: 275px;
-  height: 15rem;
+  height: 195px;
   margin: auto;
   background: url("/src/img/move_now.jpg") no-repeat;
+  @include transition-point($mobile-xs) {
+    display: none;
+  }
 }
 
 .page__title.page__title--start {

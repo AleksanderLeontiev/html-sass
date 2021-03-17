@@ -2,14 +2,19 @@
   overflow: hidden;
   padding-top: 5rem;
   padding-left: $sidebar-width;
-  background-color: cornsilk;
+  background-color: darkgrey;
   height: 100vh;
 
   @include transition-point($tablet-md) {
     padding-left: 0;
+    overflow: auto;
   }
 }
-
 .main__title {
   justify-content: center;
+  margin: 1vh 5vh;
+  @include transition-point($tablet-md) {
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
 }

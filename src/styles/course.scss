@@ -1,11 +1,13 @@
 .course {
-  margin-bottom: 3rem;
   padding: 2rem;
   background-color: $main;
   box-shadow: 0 15px 25px rgba($gray, 0.35);
   border-radius: 10px;
+  margin: 1vh 5vh;
   @include transition-point($mobile-xs) {
-    padding-right: 2rem;
+    padding: 3rem 2rem;
+    overflow: auto;
+    margin: 0;
   }
 }
 .course__list {

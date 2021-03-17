@@ -1,10 +1,14 @@
 .feedback-form {
-  padding: 2rem;
-  margin-bottom: 3rem;
+  margin: 0 5vh;
+  padding: 1rem;
   background-color: $main;
+  box-shadow: 0 15px 25px rgba($gray, 0.35);
   border-radius: 10px;
+
   @include transition-point($mobile-xs) {
-    padding-right: 1.5rem;
+    padding: 0 0 5rem 0;
+    margin: 0;
+    overflow: auto;
   }
 }
 
@@ -17,11 +21,14 @@
 .feedback-form__textarea {
   background: transparent;
   font-family: inherit;
-  height: 60px;
-  width: 100%;
+  height: 160px;
+  width: 50%;
   resize: none;
   color: $blue;
   border-radius: 5px;
+  @include transition-point($mobile-xs) {
+    padding: 5rem 2rem;
+  }
 }
 
 .feedback-form__input {
@@ -30,8 +37,14 @@
   color: $blue;
   border-radius: 5px;
   height: 20px;
+  width: 20%;
   background: transparent;
   border: solid 2px #3f3e3e;
+  @include transition-point($mobile-xs) {
+    padding: 5rem 5rem;
+    margin: 0;
+    width: inherit;
+  }
 }
 
 .feedback-form__submit {
@@ -43,10 +56,13 @@
   font-family: inherit;
   font-size: 1.4rem;
   cursor: pointer;
-  line-height: 1.6;
+  line-height: 1.9;
   font-weight: 500;
   transition: background-color 0.2s linear;
   &:hover {
     background-color: $green (15%);
+  }
+  @include transition-point($mobile-xs) {
+    padding: 1.1rem 5rem;
   }
 }

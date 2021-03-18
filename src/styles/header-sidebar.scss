@@ -45,7 +45,7 @@
 .profile__content-title {
   color: $green;
   filter: brightness(2);
- @include transition-point($tablet-md) {
+  @include transition-point($tablet-md) {
     .show-sidebar & {
       position: relative;
       display: none;

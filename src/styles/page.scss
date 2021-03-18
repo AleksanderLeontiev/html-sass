@@ -43,6 +43,9 @@
   font-size: 1.5rem;
   color: #d2d2d2;
   text-align: justify;
+  @include transition-point($mobile-xs) {
+    padding: 0 0 3rem;
+  }
 }
 .page__content-subtitle {
   color: $gray;
@@ -62,8 +65,4 @@
 
 .page__title.page__title--start {
   color: $turquoise;
-}
-.page__title.page__title--start {
-  color: $turquoise;
-  filter: brightness(2.5);
 }

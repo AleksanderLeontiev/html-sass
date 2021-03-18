@@ -6,7 +6,7 @@
 
 .search__input {
   display: block;
-  width: 100%;
+  width: 70%;
   padding: 1.2rem 2rem;
   background: transparent;
   border: none;
@@ -15,5 +15,10 @@
   color: $blue;
   &::placeholder {
     color: rgba($blue, 0.4);
+  }
+  @include transition-point($mobile-xs) {
+    margin: 0;
+    padding: 1rem 0;
+    width: 100%;
   }
 }

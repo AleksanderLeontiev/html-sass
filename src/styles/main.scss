@@ -14,7 +14,9 @@
   justify-content: center;
   margin: 1vh 5vh;
   @include transition-point($tablet-md) {
-    font-size: 1.5rem;
-    padding: 1rem;
+    font-size: 1.3rem;
+    padding: 0;
+    margin: 0;
+    //display: none;
   }
 }

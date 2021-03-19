@@ -4,10 +4,10 @@
   box-shadow: 0 15px 25px rgba($gray, 0.35);
   border-radius: 10px;
   margin: 1vh 5vh;
-  @include transition-point($mobile-xs) {
-    padding: 3rem 2rem;
-    overflow: auto;
+  @include transition-point($tablet-md) {
     margin: 0;
+    padding: 3rem 1rem;
+    overflow: auto;
   }
 }
 .course__list {

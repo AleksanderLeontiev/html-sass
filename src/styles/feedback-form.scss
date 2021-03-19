@@ -1,13 +1,13 @@
 .feedback-form {
   margin: 0 5vh;
-  padding: 1rem;
+  padding: 2rem;
   background-color: $main;
   box-shadow: 0 15px 25px rgba($gray, 0.35);
   border-radius: 10px;
 
-  @include transition-point($mobile-xs) {
-    padding: 0 0 5rem 0;
+  @include transition-point($tablet-md) {
     margin: 0;
+    padding: 3rem 2rem;
     overflow: auto;
   }
 }
@@ -26,8 +26,9 @@
   resize: none;
   color: $blue;
   border-radius: 5px;
-  @include transition-point($mobile-xs) {
-    padding: 5rem 4.8rem;
+  @include transition-point($tablet-md) {
+    padding: 4rem 4rem;
+    margin: 0;
   }
 }
 
@@ -40,8 +41,8 @@
   width: 20%;
   background: transparent;
   border: solid 2px #3f3e3e;
-  @include transition-point($mobile-xs) {
-    padding: 5rem 5rem;
+  @include transition-point($tablet-md) {
+    padding: 5rem 2rem;
     margin: 0;
     width: inherit;
   }
@@ -62,8 +63,8 @@
   &:hover {
     background-color: $green (15%);
   }
-  @include transition-point($mobile-xs) {
-    padding: 1.1rem 5rem;
-    margin: 1rem;
+  @include transition-point($tablet-md) {
+    padding: 1.1rem 4rem;
+    margin: 0 0.5rem;
   }
 }

@@ -23,7 +23,9 @@
   display: flex;
   width: 40%;
   justify-content: flex-end;
+  margin: 0 0 0 10rem;
   @include transition-point($tablet-md) {
     width: 60%;
+    margin: 0 0 0 10rem;
   }
 }

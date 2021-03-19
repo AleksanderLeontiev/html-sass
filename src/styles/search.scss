@@ -17,7 +17,7 @@
     color: rgba($blue, 0.4);
   }
   @include transition-point($mobile-xs) {
-    margin: 0;
+    margin: 0 1rem;
     padding: 1rem 0;
     width: 100%;
   }

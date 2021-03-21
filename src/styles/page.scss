@@ -59,7 +59,7 @@
   height: 195px;
   margin: auto;
   background: url("/src/img/move_now.jpg") no-repeat;
-  @include transition-point($mobile-xs) {
+  @include transition-point($tablet-md) {
     display: none;
   }
 }

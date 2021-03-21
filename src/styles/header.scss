@@ -9,6 +9,7 @@
   z-index: 0;
   @include transition-point($tablet-md) {
     width: 100%;
+    padding: 0;
   }
 }
 
@@ -16,16 +17,17 @@
   display: flex;
   width: 60%;
   @include transition-point($tablet-md) {
-    width: 40%;
+    width: 20%;
   }
 }
 .header__right {
   display: flex;
   width: 40%;
   justify-content: flex-end;
-  margin: 0 0 0 10rem;
+  margin: 0 0 0 3rem;
   @include transition-point($tablet-md) {
-    width: 60%;
-    margin: 0 0 0 10rem;
+    width: 100%;
+    margin: 0 0 0 5rem;
+    padding: 0;
   }
 }

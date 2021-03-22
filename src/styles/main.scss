@@ -8,6 +8,7 @@
   @include transition-point($tablet-md) {
     padding-left: 0;
     overflow: auto;
+    height: 100%;
   }
 }
 .main__title {

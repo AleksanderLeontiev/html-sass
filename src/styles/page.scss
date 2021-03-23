@@ -1,12 +1,12 @@
 .page {
-  padding: 1rem 2rem;
+  padding: 3rem 2rem;
   background-color: $main;
   box-shadow: 0 15px 25px rgba($gray, 0.35);
   border-radius: 10px;
   margin: 1vh 5vh;
   @include transition-point($tablet-md) {
     margin: 0;
-    padding: 3rem 1rem;
+    padding: 1rem 1rem;
     overflow: auto;
   }
 }
@@ -16,6 +16,11 @@
   font-size: 1.8rem;
   color: $blue;
   font-weight: 500;
+  @include transition-point($tablet-md) {
+    font-size: 1.4rem;
+    padding: 0.5rem 0.5rem;
+    margin: 0;
+  }
 }
 .page__actions {
   display: flex;
@@ -45,14 +50,24 @@
   text-align: justify;
   @include transition-point($tablet-md) {
     padding: 0 0 3rem;
-    overflow: auto;
+    font-size: 1.4rem;
   }
 }
 .page__content-subtitle {
   color: $gray;
+  @include transition-point($tablet-md) {
+    padding: 0;
+    margin: 0;
+    font-size: 1.6rem;
+  }
 }
 .page__content-title {
   color: $gray;
+  @include transition-point($tablet-md) {
+    padding: 0;
+    margin: 0;
+    font-size: 1.6rem;
+  }
 }
 .page__text-img {
   width: 275px;

@@ -31,10 +31,12 @@
 
 .sidebar__content {
   padding: 0 1rem;
+  font-size: 1rem;
 }
 .profile {
   color: chartreuse;
   overflow: hidden;
+
   @include transition-point($tablet-md) {
     .show-sidebar & {
       position: relative;

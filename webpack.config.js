@@ -46,9 +46,6 @@ module.exports = {
     port: 9000,
     openPage: "index.html",
     transportMode: "ws",
-    proxy: {
-      "/api": "http://localhost:3000",
-    },
   },
   plugins: [
     new CleanWebpackPlugin(),

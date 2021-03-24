@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "prettier --check . && stylelint **/*.scss",
     "lint:fix": "prettier --write . && stylelint **/*.scss --fix",
-    "start": "webpack serve --mode development",
+    "start": "webpack serve --mode development -open",
     "build": "webpack --mode production"
   },
   "repository": {

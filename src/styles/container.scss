@@ -1,11 +1,10 @@
 .container {
-  max-width: 70rem;
-  margin: 0 auto;
-  padding-left: 5rem;
-  padding-right: 5rem;
-
-  @include transition-point($mobile-xs) {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+  width: 100%;
+  margin: 0;
+  @include transition-point($tablet-md) {
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.5rem;
+    //height: 100%;
   }
 }

@@ -1,13 +1,18 @@
 .search {
   width: 100%;
-  max-width: 21rem;
+  max-width: 18rem;
   background-color: $main;
+  margin: 0 1rem;
+  @include transition-point($tablet-md) {
+    margin-left: 0;
+    padding: 0 2rem;
+  }
 }
 
 .search__input {
   display: block;
-  width: 100%;
-  padding: 1.2rem 2rem;
+  width: 70%;
+  padding: 1.2rem 1rem;
   background: transparent;
   border: none;
   font-family: inherit;
@@ -15,5 +20,10 @@
   color: $blue;
   &::placeholder {
     color: rgba($blue, 0.4);
+  }
+  @include transition-point($tablet-md) {
+    margin: 0 0.5rem;
+    padding: 2rem 0.5rem;
+    width: inherit;
   }
 }

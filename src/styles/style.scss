@@ -1,13 +1,15 @@
 html {
-  height: 100vh;
-  font-size: 13px;
+  height: 100%;
+  font-size: 18px;
+  width: 100%;
 }
 body {
-  font-size: 1.2rem;
   line-height: 1.5;
   font-family: sans-serif;
   height: 100%;
   overflow: hidden;
+  padding: 0;
+  margin: 0;
 }
 @import "vars";
 @import "mixins";
@@ -20,3 +22,4 @@ body {
 @import "page";
 @import "course";
 @import "feedback-form";
+@import "burger";

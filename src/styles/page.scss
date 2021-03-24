@@ -1,21 +1,22 @@
 .page {
-  padding: 3rem 2rem;
+  padding: 0 1rem;
   background-color: $main;
   box-shadow: 0 15px 25px rgba($gray, 0.35);
   border-radius: 10px;
-  margin: 1vh 5vh;
+  margin: 1vh 5vh 5vh;
   @include transition-point($tablet-md) {
-    margin: 0;
+    margin: 0 0 5rem;
     padding: 1rem 1rem;
     overflow: auto;
   }
 }
 
 .page__title {
-  margin-bottom: 1.5rem;
-  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
   color: $blue;
   font-weight: 500;
+  height: 100%;
   @include transition-point($tablet-md) {
     font-size: 1.4rem;
     padding: 0.5rem 0.5rem;
@@ -41,20 +42,27 @@
 }
 
 .page__content {
-  margin-bottom: 1.5rem;
+  padding: 0;
+  margin: 0;
   @include page-img;
 }
 .page__text {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #d2d2d2;
   text-align: justify;
+  padding: 0.5rem 0 0.5rem 0;
+  margin: 0;
+
   @include transition-point($tablet-md) {
-    padding: 0 0 3rem;
-    font-size: 1.4rem;
+    padding: 0 0 1rem;
+    font-size: 1.2rem;
   }
 }
 .page__content-subtitle {
   color: $gray;
+  padding: 0;
+  margin: 0;
+  font-size: 1.2rem;
   @include transition-point($tablet-md) {
     padding: 0;
     margin: 0;
@@ -63,16 +71,20 @@
 }
 .page__content-title {
   color: $gray;
+  padding: 0;
+  margin: 0;
+  font-size: 1.3rem;
   @include transition-point($tablet-md) {
     padding: 0;
     margin: 0;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 }
 .page__text-img {
   width: 275px;
-  height: 195px;
+  height: 185px;
   margin: auto;
+  padding: 0;
   background: url("/src/img/move_now.jpg") no-repeat;
   @include transition-point($tablet-md) {
     display: none;
@@ -81,4 +93,7 @@
 
 .page__title.page__title--start {
   color: $turquoise;
+  padding-top: 0.5rem;
+  margin: 0;
+  font-size: 1.4rem;
 }

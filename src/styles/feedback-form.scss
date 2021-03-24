@@ -1,20 +1,22 @@
 .feedback-form {
   margin: 1vh 5vh;
-  padding: 5rem;
+  padding: 0.5rem 1rem;
   background-color: $main;
   box-shadow: 0 15px 25px rgba($gray, 0.35);
   border-radius: 10px;
   box-sizing: inherit;
   @include transition-point($tablet-md) {
-    margin: 0 0 2rem 0;
-    padding: 4rem 1rem;
+    //margin: 0 0 2rem 0;
+    //padding: 4rem 1rem;
+    margin: 0 0 5rem;
+    padding: 1rem 1rem;
     overflow: auto;
     height: 100%;
   }
 }
 
 .feedback-form__titles {
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
   font-size: 1.4rem;
   color: $green;
   @include transition-point($tablet-md) {
@@ -57,8 +59,8 @@
 }
 
 .feedback-form__submit {
-  margin: 1rem 0;
-  padding: 1.1rem 4rem;
+  margin: 0.5rem 0;
+  padding: 0.5rem 4rem;
   display: block;
   background: $blue;
   border: none;

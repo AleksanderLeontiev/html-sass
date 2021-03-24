@@ -1,12 +1,14 @@
 .course {
-  padding: 3rem;
+  padding: 1rem;
   background-color: $main;
   box-shadow: 0 15px 25px rgba($gray, 0.35);
   border-radius: 10px;
   margin: 1vh 5vh;
   @include transition-point($tablet-md) {
-    margin: 1rem 0;
-    padding: 4rem 1rem;
+    //margin: 1rem 0 ;
+    //padding: 4rem 1rem;
+    margin: 0 0 5rem;
+    padding: 1rem 1rem;
     overflow: auto;
   }
 }
@@ -15,21 +17,28 @@
   margin-top: -1.5rem;
 }
 .course__text {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: #d2d2d2;
   text-align: justify;
 }
 .course__article {
   border-bottom: 2px solid #1c1c1c;
-  margin-bottom: 2rem;
+  margin: 0;
 }
 
 .course__link {
   color: $green;
+  font-size: 1.4rem;
   @include transition-point($tablet-md) {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
+}
+.course__title {
+  margin: 0.5rem 0;
 }
 .course__read {
   color: $blue;
+  @include transition-point($tablet-md) {
+    font-size: 1.2rem;
+  }
 }

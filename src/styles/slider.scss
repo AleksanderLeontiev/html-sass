@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+  //padding: 0;
+  //margin: 0;
+  //transition: .5s ease-in-out;
+}
+
+.slider {
+  display: flex;
+  width: 100%;
+  height: 70%;
+  margin: 0;
+  position: relative;
+  @include transition-point(705px) {
+    padding-right: 1.5rem;
+    width: 90%;
+    z-index: 0;
+    overflow: auto;
+  }
+
+  flex-direction: column;
+  align-items: flex-end;
+}
+.slider-counter {
+  top: 50%;
+  width: 100%;
+  color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  height: 100px;
+}
+.slider-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.slider-prev,
+.slider-next {
+  cursor: pointer;
+  position: absolute;
+  //top: 50%;
+  width: auto;
+  top: 0;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.1s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+.slider-next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.slider-prev:hover,
+.slider-next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+//.dot {
+//  text-align:center;
+//  cursor: pointer;
+//  height: 15px;
+//  width: 15px;
+//  margin: 0 2px;
+//  background-color: #bbb;
+//  border-radius: 50%;
+//  display: inline-block;
+//  transition: background-color 0.6s ease;
+//}
+//.active, .dot:hover {
+//  background-color: #717171;
+//}
+//.text {
+//  color: #f2f2f2;
+//  font-size: 15px;
+//  //padding: 1rem 2rem;
+//  position: absolute;
+//  //bottom: 8px;
+//  width: 100%;
+//  text-align: center;
+//}
+
+//.slider-prev {
+//  // margin-right: 10px;
+//  cursor: pointer;
+//  // display: block;
+//  left: 0;
+//  width: 3rem;
+//}
+//.slider-next {
+//  // margin-left: 10px;
+//  cursor: pointer;
+//  // display: block;
+//  right:0;
+//  width: 3rem;
+//}
+//.slider #current {
+//  font-size: 48px;
+//  font-weight: 700;
+//  color: #000;
+//}
+.slide {
+  width: 100%;
+  height: 70vh;
+  display: none;
+  transition: all ease 10ms;
+  overflow: auto;
+}
+.slide img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 3rem;
+  position: relative;
+  right: 1rem;
+  transition: all ease 10s;
+}
+.page-slider {
+  padding: 0;
+  background-color: $main;
+  box-shadow: 0 15px 25px rgba($gray, 0.35);
+  border-radius: 30px;
+  margin: 1vh 3vh 1vh;
+  @include transition-point($tablet-md) {
+    margin: 0 0 5rem;
+    padding: 1rem 1rem;
+    overflow: auto;
+  }
+}
+.page__header-slider {
+  margin: 0 2rem;
+  padding: 0;
+}

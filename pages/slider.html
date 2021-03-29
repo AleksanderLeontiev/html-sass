@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="Description" content="main page of the site" />
-    <title>Main</title>
+    <meta name="Description" content="site article" />
+    <title>Record page</title>
   </head>
   <body>
     <header class="header">
@@ -23,9 +23,6 @@
             </li>
             <li>
               <a class="nav__link" href="record_page.html">Страница записи</a>
-            </li>
-            <li>
-              <a class="nav__link" href="slider.html">Слайдер</a>
             </li>
           </ul>
         </nav>
@@ -53,7 +50,9 @@
       <div class="sidebar__header"></div>
       <div class="sidebar__content">
         <div class="profile">
-          <h2 class="profile__content-title">Интересные факты</h2>
+          <div class="profile__content">
+            <h2 class="profile__content-title">Интересные факты</h2>
+          </div>
           <div class="profile__text">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -86,40 +85,30 @@
       </nav>
     </aside>
     <main class="main">
-      <h1 class="main__title">Главная страница</h1>
-      <h2 class="main__title">Быстрый старт в английском</h2>
-      <div class="page">
-        <div class="page__content">
-          <p class="page__text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Asperiores, debitis? Beatae, aliquid dolor atque, fugit deserunt
-            aperiam magnam sequi cupiditate minus earum, nostrum at eos placeat
-            quis nulla delectus corrupti. Lorem ipsum dolor sit amet,
-            consectetur adipisicing elit. Asperiores, debitis? Beatae, aliquid
-            dolor atque, fugit deserunt aperiam magnam sequi cupiditate minus
-            earum, nostrum at eos placeat quis nulla delectus corrupti.
-          </p>
-        </div>
+      <div class="main__actions">
+        <a href="index.html"> вернуться на главную страницу </a>
       </div>
-      <div class="page">
-        <div class="page__content">
-          <a href="record_page.html">
-            <h2 class="page__title">С чего начать изучать иностранный язык</h2>
-          </a>
-          <p class="page__text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Asperiores, debitis? Beatae, aliquid dolor atque, fugit deserunt
-            aperiam magnam sequi cupiditate minus earum, nostrum at eos placeat
-            quis nulla delectus corrupti. Lorem ipsum dolor sit amet,
-            consectetur adipisicing elit. Asperiores, debitis? Beatae, aliquid
-            dolor atque, fugit deserunt aperiam magnam sequi cupiditate minus
-            earum, nostrum at eos placeat quis nulla delectus corrupti. Lorem
-            ipsum dolor sit amet, consectetur adipisicing elit. Asperiores,
-            debitis? Beatae, aliquid dolor atque, fugit deserunt aperiam magnam
-            sequi cupiditate minus earum, nostrum at eos placeat quis nulla
-            delectus corrupti. Lorem ipsum dolor sit amet, consectetur.
-          </p>
-        </div>
+      <h1 class="main__title">Слайдер</h1>
+      <div class="container-slider">
+        <article class="page-slider">
+          <div class="page__header-slider">
+            <div class="slider">
+              <ul class="slider-wrapper"></ul>
+              <div class="slider-counter">
+                <!--                        <div class="text">Caption Text</div>-->
+                <!--                        <div style="text-align:center">-->
+                <!--                            <span class="dot"></span>-->
+                <!--                            <span class="dot"></span>-->
+                <!--                            <span class="dot"></span>-->
+                <!--                            <span class="dot"></span>-->
+                <!--                            <span class="dot"></span>-->
+                <!--                        </div>-->
+                <div class="slider-prev">&#10094;</div>
+                <div class="slider-next">&#10095;</div>
+              </div>
+            </div>
+          </div>
+        </article>
       </div>
     </main>
   </body>

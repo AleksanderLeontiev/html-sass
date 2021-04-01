@@ -64,6 +64,7 @@
     "*.scss": "stylelint --fix"
   },
   "dependencies": {
-    "glob": "latest"
+    "glob": "latest",
+    "sockjs": "^0.3.21"
   }
 }

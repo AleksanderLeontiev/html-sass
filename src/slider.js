@@ -1,5 +1,4 @@
 import { images } from "./slides";
-
 const prev = document.querySelector(".slider-prev");
 const next = document.querySelector(".slider-next");
 const sliderWrapper = document.querySelector(".slider-wrapper");
@@ -7,13 +6,13 @@ const slide = document.querySelector(".page-slider");
 let width;
 let currentSlideIndex = 0;
 const TIMEOUT = 5000;
-
-function initSlides(images) {
+console.log(images);
+export function initSlides(images) {
   for (let i = 0; i < images.length; i++) {
     const slideLi = document.createElement("li");
     slideLi.className = "slide";
     if (i === currentSlideIndex) {
-      slideLi.style.display = "flex";
+      slideLi.style.display = "inline-block";
     }
     const slideImg = document.createElement("img");
     slideImg.src = images[i].default;
@@ -25,7 +24,7 @@ function initSlides(images) {
 
 initSlides(images);
 
-function clearSlides() {
+export function clearSlides() {
   for (let i = 0; i < sliderWrapper.children.length; i++) {
     sliderWrapper.children[i].style.display = "none";
   }
@@ -36,7 +35,7 @@ function showSlide() {
     throw new Error("illegal argument exception");
   }
   clearSlides();
-  sliderWrapper.children[currentSlideIndex].style.display = "flex";
+  sliderWrapper.children[currentSlideIndex].style.display = "inline-block";
   sliderWrapper.style.transform = "translate(-" + sliderWrapper * width + "px)";
 }
 

@@ -1,13 +1,17 @@
 import { images } from "./slides";
+
 const prev = document.querySelector(".slider-prev");
 const next = document.querySelector(".slider-next");
-const sliderWrapper = document.querySelector(".slider-wrapper");
+// const sliderWrapper = document.querySelector(".slider-wrapper");
 const slide = document.querySelector(".page-slider");
 let width;
 let currentSlideIndex = 0;
 const TIMEOUT = 5000;
-console.log(images);
+
+// console.log(images);
+
 export function initSlides(images) {
+  const sliderWrapper = document.querySelector(".slider-wrapper");
   for (let i = 0; i < images.length; i++) {
     const slideLi = document.createElement("li");
     slideLi.className = "slide";
@@ -17,70 +21,69 @@ export function initSlides(images) {
     const slideImg = document.createElement("img");
     slideImg.src = images[i].default;
     slideImg.alt = `img${i}`;
-    slideLi.appendChild(slideImg);
-    sliderWrapper.appendChild(slideLi);
+    slideLi.append(slideImg);
+    sliderWrapper.append(slideLi);
   }
 }
 
-initSlides(images);
-
-export function clearSlides() {
+function clearSlides() {
+  const sliderWrapper = document.querySelector(".slider-wrapper");
   for (let i = 0; i < sliderWrapper.children.length; i++) {
     sliderWrapper.children[i].style.display = "none";
   }
 }
 
-function showSlide() {
+export function showSlide(images) {
   if (currentSlideIndex > images.length - 1) {
     throw new Error("illegal argument exception");
   }
+  const sliderWrapper = document.querySelector(".slider-wrapper");
   clearSlides();
   sliderWrapper.children[currentSlideIndex].style.display = "inline-block";
   sliderWrapper.style.transform = "translate(-" + sliderWrapper * width + "px)";
 }
 
-if (prev !== null) {
-  prev.addEventListener("click", () => {
-    currentSlideIndex -= 1;
-    if (currentSlideIndex < 0) {
-      currentSlideIndex = images.length - 1;
-    }
-    showSlide();
-  });
-}
-
-if (next !== null) {
-  next.addEventListener("click", () => {
-    currentSlideIndex += 1;
-    if (currentSlideIndex > images.length - 1) {
-      currentSlideIndex = 0;
-    }
-    showSlide();
-  });
-}
-
-function showSlideAuto() {
+function showSlideAuto(images) {
   currentSlideIndex += 1;
   if (currentSlideIndex > images.length - 1) {
     currentSlideIndex = 0;
   }
-  showSlide();
-  console.log("hi");
+  showSlide(images);
 }
 
-function startShowSlides() {
-  return setInterval(() => showSlideAuto(), TIMEOUT);
+function startShowSlides(images) {
+  return setInterval(() => showSlideAuto(images), TIMEOUT);
 }
 
-let startSlideShow = startShowSlides();
-slide.onmouseenter = () => {
-  console.log("входит");
-  if (startSlideShow) {
-    clearInterval(startSlideShow);
+export function initListeners(images) {
+  if (prev) {
+    prev.addEventListener("click", () => {
+      currentSlideIndex -= 1;
+      if (currentSlideIndex < 0) {
+        currentSlideIndex = images.length - 1;
+      }
+      showSlide(images);
+    });
   }
-};
 
-slide.onmouseleave = () => {
-  console.log("и выходит");
-  startSlideShow = startShowSlides();
-};
+  if (next) {
+    next.addEventListener("click", () => {
+      currentSlideIndex += 1;
+      if (currentSlideIndex > images.length - 1) {
+        currentSlideIndex = 0;
+      }
+      showSlide(images);
+    });
+  }
+  if (slide) {
+    let startSlideShow = startShowSlides(images);
+    slide.onmouseenter = () => {
+      if (startSlideShow) {
+        clearInterval(startSlideShow);
+      }
+    };
+    slide.onmouseleave = () => {
+      startSlideShow = startShowSlides(images);
+    };
+  }
+}

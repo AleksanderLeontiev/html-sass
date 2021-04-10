@@ -1,14 +1,9 @@
-import { images } from "./slides";
-
 const prev = document.querySelector(".slider-prev");
 const next = document.querySelector(".slider-next");
-// const sliderWrapper = document.querySelector(".slider-wrapper");
 const slide = document.querySelector(".page-slider");
 let width;
 let currentSlideIndex = 0;
 const TIMEOUT = 5000;
-
-// console.log(images);
 
 export function initSlides(images) {
   const sliderWrapper = document.querySelector(".slider-wrapper");
@@ -43,7 +38,7 @@ export function showSlide(images) {
   sliderWrapper.style.transform = "translate(-" + sliderWrapper * width + "px)";
 }
 
-function showSlideAuto(images) {
+export function showSlideAuto(images) {
   currentSlideIndex += 1;
   if (currentSlideIndex > images.length - 1) {
     currentSlideIndex = 0;
@@ -51,7 +46,7 @@ function showSlideAuto(images) {
   showSlide(images);
 }
 
-function startShowSlides(images) {
+export function startShowSlides(images) {
   return setInterval(() => showSlideAuto(images), TIMEOUT);
 }
 

@@ -1,8 +1,7 @@
+import { images } from "./slides";
+import { Slider } from "./slider.js";
+export const slider = new Slider(".slider-wrapper");
+slider.initSlides(images);
+slider.showSlides();
 import "./styles/style.scss";
 import "./mobile.js";
-import "./slider.js";
-import { images } from "./slides";
-import { initListeners, initSlides, showSlide } from "./slider";
-initSlides(images);
-initListeners(images);
-showSlide(images);

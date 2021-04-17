@@ -41,13 +41,4 @@ describe("Should slider work", () => {
       "inline-block"
     );
   });
-  it("check that showSlides returns none", () => {
-    const slider = new Slider(".slider-wrapper");
-    slider.initSlides(img);
-    const currentSlideIndex = 1;
-    slider.clearSlides();
-    expect(slider.slides.children[currentSlideIndex].style.display).toBe(
-      "none"
-    );
-  });
 });

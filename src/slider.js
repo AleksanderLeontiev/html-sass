@@ -42,7 +42,6 @@ export class Slider {
 
   nextShowSlide() {
     this.currentSlideIndex += 1;
-    console.log(this.images);
     if (this.currentSlideIndex >= this.images.length) {
       this.currentSlideIndex = 0;
     }

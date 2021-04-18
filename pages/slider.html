@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="Description" content="user feedback form" />
-    <title>Feedback</title>
+    <meta name="Description" content="site article" />
+    <title>Record page</title>
   </head>
   <body>
     <header class="header">
@@ -23,9 +23,6 @@
             </li>
             <li>
               <a class="nav__link" href="record_page.html">Страница записи</a>
-            </li>
-            <li>
-              <a class="nav__link" href="slider.html">Слайдер</a>
             </li>
           </ul>
         </nav>
@@ -83,9 +80,6 @@
           <li>
             <a class="nav__link" href="./record_page.html">Страница записи</a>
           </li>
-          <li>
-            <a class="nav__link" href="slider.html">Слайдер</a>
-          </li>
           <li><a class="nav__link" href="#">Выйти</a></li>
         </ul>
       </nav>
@@ -94,43 +88,19 @@
       <div class="main__actions">
         <a href="index.html"> вернуться на главную страницу </a>
       </div>
-      <h1 class="main__title">Форма обратной связи.</h1>
-      <div class="container">
-        <form name="form" method="post" class="feedback-form">
-          <div class="feedback-form__titles">Ваше имя</div>
-          <input
-            class="feedback-form__input"
-            name="name"
-            type="text"
-            aria-label="input-name"
-          />
-          <div class="feedback-form__titles">Электронная почта</div>
-          <input
-            class="feedback-form__input"
-            name="email"
-            type="text"
-            aria-label="input-email"
-          />
-          <div class="feedback-form__titles">Тема сообщения</div>
-          <input
-            class="feedback-form__input"
-            name="subjects"
-            type="text"
-            aria-label="input-message"
-          />
-          <div class="feedback-form__titles">Текст сообщения:</div>
-          <textarea
-            class="feedback-form__textarea"
-            name="post-text"
-            placeholder="Введите текст"
-            aria-label="input-text"
-          ></textarea>
-          <input
-            class="feedback-form__submit"
-            value="Отправить"
-            type="submit"
-          />
-        </form>
+      <h1 class="main__title">Слайдер</h1>
+      <div class="container-slider">
+        <article class="page-slider">
+          <div class="page__header-slider">
+            <div class="slider">
+              <ul class="slider-wrapper"></ul>
+              <div class="slider-counter">
+                <div class="slider-prev">&#10094;</div>
+                <div class="slider-next">&#10095;</div>
+              </div>
+            </div>
+          </div>
+        </article>
       </div>
     </main>
   </body>
